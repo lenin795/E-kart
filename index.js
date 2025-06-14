@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded",()=>{
             tolat:tolat.value,
             tolon:tolon.value,
             status:"processing",
-            username: localStorage.getItem("loggedinuser")
+            customername: document.getElementById("customername").value.trim(),
+            customerphone: document.getElementById("customerphone").value.trim()
         };
         userOrders.push(order);
         saveorder();
