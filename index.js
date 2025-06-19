@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     window.logout = () => {
         localStorage.removeItem("loggedinuser");
         localStorage.removeItem("loggedinadmin");
-        showUserLogin();
-
+        showUserLogin()
     };
 
     userform.addEventListener("submit",(e)=>{
@@ -45,13 +44,13 @@ document.addEventListener("DOMContentLoaded",()=>{
         else if(username=="balaji" && phoneno=="1234567890") {
             localStorage.setItem("loggedinuser",username);
             userloginsection.style.display = "none";
-            userdashboard.style.display = "block";
-            
+            userdashboard.style.display = "block";   
         }
         else{
             alert("Invalid User Name and Password")
         }
     });
+    
     adminform.addEventListener("submit",(e)=>{
         e.preventDefault();
         const adminname=document.getElementById("adminname").value;
@@ -133,7 +132,6 @@ document.addEventListener("DOMContentLoaded",()=>{
             <td>${order.fromlon}</td>
             <td>${order.tolat}</td>
             <td>${order.tolon}</td>
-
             <td>
               <select onchange="updateStatus(${i}, this.value)" class="form-select">
                 <option value="Processing" ${order.status === "Processing" ? "selected" : ""}>Processing</option>
