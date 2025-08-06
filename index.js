@@ -143,16 +143,21 @@ document.addEventListener("DOMContentLoaded",()=>{
                 <option value="Picked Up"     
                         ${order.status === "Picked Up" ? "selected" : ""}>
                         Picked Up</option>
+                        
                 <option value="In Transit"     
                         ${order.status === "In Transit" ? "selected" : ""}>
                         In Transit</option>
+                        
                 <option value="Delivered"
                         ${order.status === "Delivered" ? "selected" : ""}>
                         Delivered</option>
+                        
                 <option value="Return" 
                         ${order.status === "Return" ? "selected" : ""}>
                         Return</option>
+                        
               </select>
+              
             </td>
           </tr>`;
       });
