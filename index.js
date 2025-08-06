@@ -133,12 +133,25 @@ document.addEventListener("DOMContentLoaded",()=>{
             <td>${order.tolat}</td>
             <td>${order.tolon}</td>
             <td>
-              <select onchange="updateStatus(${i}, this.value)" class="form-select">
-                <option value="Processing" ${order.status === "Processing" ? "selected" : ""}>Processing</option>
-                <option value="Picked Up" ${order.status === "Picked Up" ? "selected" : ""}>Picked Up</option>
-                <option value="In Transit" ${order.status === "In Transit" ? "selected" : ""}>In Transit</option>
-                <option value="Delivered" ${order.status === "Delivered" ? "selected" : ""}>Delivered</option>
-                <option value="Return" ${order.status === "Return" ? "selected" : ""}>Return</option>
+              <select onchange="updateStatus
+                      (${i}, this.value)" class="form-select">
+                      
+                <option value="Processing" 
+                        ${order.status === "Processing" ? "selected" : ""}>
+                        Processing</option>
+                        
+                <option value="Picked Up"     
+                        ${order.status === "Picked Up" ? "selected" : ""}>
+                        Picked Up</option>
+                <option value="In Transit"     
+                        ${order.status === "In Transit" ? "selected" : ""}>
+                        In Transit</option>
+                <option value="Delivered"
+                        ${order.status === "Delivered" ? "selected" : ""}>
+                        Delivered</option>
+                <option value="Return" 
+                        ${order.status === "Return" ? "selected" : ""}>
+                        Return</option>
               </select>
             </td>
           </tr>`;
